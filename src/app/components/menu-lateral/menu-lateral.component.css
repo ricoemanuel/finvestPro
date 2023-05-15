@@ -1,0 +1,66 @@
+.menu {
+    position: fixed;
+    top: 67px;
+    left: -200px; /* El menú estará oculto inicialmente */
+    width: 200px;
+    background-color: #f2f2f2;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    height: 100%;
+    
+  }
+  
+  .menu.open {
+    left: 0; /* Mostrar el menú */
+  }
+  
+  .menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .menu ul li {
+    margin: 10px 0;
+  }
+  
+  .menu ul li a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+  }
+  .desplazar{
+    margin-left: 200px;
+    transition: all 0.3s ease-in-out;
+  }
+  .boton{
+    padding: 20px;
+    transition: all 0.3s ease-in-out;
+  }
+  .MenuToggle{
+    vertical-align: baseline!important;
+    width: 20px;
+    height: 20px;
+  }
+  
+  .menuControler{
+    margin-top: -20px;
+  }
+  .head{
+    background-color: #f2f2f2;
+    box-shadow: 0px 8px 16px 0px rgba(8, 7, 7, 0.2);
+    padding: 20px;
+    width: 100%;
+    z-index: 1;
+    position: fixed;
+  }
+  .content{
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    top:67px;
+  }
+  .logoHead{
+    width: 200px;
+  }
+  

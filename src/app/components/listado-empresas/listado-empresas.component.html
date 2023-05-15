@@ -1,0 +1,31 @@
+<div class="table-container">
+    <table class="table">
+        <thead>
+            <tr>
+              <th>#</th>
+              <th>Simbolo</th>
+              <th>Nombre</th>
+              <th>Intercambio</th>
+              <th>tipo de activos</th>
+              <th>Fecha IPO</th>
+            </tr>
+          </thead>
+          <tbody>
+            
+            <tr (click)="VerEmpresa(i)" class="empresa" *ngFor="let empresa of empresas | paginate: { itemsPerPage: 12, currentPage: currentPage }; let i = index">
+                <td>{{ i + 1 + (currentPage - 1) * 12 }}</td>
+                <td>{{ empresa["symbol"] }}</td>
+                <td>{{ empresa["name"] }}</td>
+                <td>{{ empresa["exchange"] }}</td>
+                <td>{{ empresa["assetType"] }}</td>
+                <td>{{ empresa["ipoDate"] }}</td>
+            </tr>
+          </tbody>
+          
+    </table>
+  </div>
+  
+<div class="mx-auto">
+    <pagination-controls (pageChange)="currentPage = $event"></pagination-controls>
+</div>
+

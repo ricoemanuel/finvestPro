@@ -1,0 +1,29 @@
+
+.table td {
+    white-space: nowrap;
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  
+  .table thead th {
+    position: sticky;
+    top: 67px;
+    z-index: 1;
+    background-color: white;
+  }
+  
+  .table td {
+    white-space: nowrap;
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .empresa{
+    cursor: pointer;
+  }
+  .empresa:hover{
+    background-color: #f2f2f2;
+    
+  }

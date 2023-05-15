@@ -1,0 +1,18 @@
+<!-- Botón para abrir el menú -->
+<div class="head">
+    <a (click)="toggleMenu()" class="boton">
+        <img class="MenuToggle" src="../../../assets/menu.png"></a>
+    <img class="logoHead" src="../../../assets/image-removebg-preview.png">
+    
+</div>
+
+
+<!-- Menú -->
+<div class="menu" [ngClass]="{'open': isMenuOpen}">
+    <ul>
+        <li><a href="/empresas">Empresas</a></li>
+    </ul>
+</div>
+<div class="content" [ngClass]="{'desplazar': isMenuOpen}">
+    <router-outlet></router-outlet>
+</div>
