@@ -27,3 +27,18 @@
     background-color: #f2f2f2;
     
   }
+  .sobreponer{
+    z-index: 1;
+  }
+  .selected{
+    background-color: gray;
+  }
+  .cursorP:hover{
+    cursor: pointer;
+  }
+  .position{
+    position: fixed;
+    top: 14px;
+    left: 290px;
+    z-index: 1;
+  }

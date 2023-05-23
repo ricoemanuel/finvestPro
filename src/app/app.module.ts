@@ -8,19 +8,22 @@ import { ListadoEmpresasComponent } from './components/listado-empresas/listado-
 
 import { NgxPaginationModule } from 'ngx-pagination';
 import { DetalleEmpresaComponent } from './components/detalle-empresa/detalle-empresa.component';
-
+import { FormsModule } from '@angular/forms';
+import { TablaDecisionEmpresaComponent } from './components/tabla-decision-empresa/tabla-decision-empresa.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuLateralComponent,
     ListadoEmpresasComponent,
-    DetalleEmpresaComponent
+    DetalleEmpresaComponent,
+    TablaDecisionEmpresaComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

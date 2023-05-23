@@ -1,3 +1,42 @@
-<div>
+<div class="row">
+  <div class="col-md-8">
     <canvas id="myChart"></canvas>
+    <div class="paginator mx-auto">
+      <button class="btn" (click)="previous()"><<</button>
+      {{pagina}}
+      <button class="btn" (click)="next()">>></button>
+    </div>
   </div>
+
+  <div class="col-md-4">
+    <h3>Información</h3>
+    <p><span class="subtitle">Nombre: </span>{{detalle["name"]}}</p>
+    <p><span class="subtitle">Media: </span>{{detalle["media"]}}</p>
+    <p><span class="subtitle">Mediana: </span>{{detalle["mediana"]}}</p>
+    <p><span class="subtitle">Moda: </span>{{detalle["moda"]}}</p>
+    <p><span class="subtitle">Desviación: </span>{{detalle["desviacion"]}}</p>
+    <p><span class="subtitle">Varianza: </span>{{detalle["varianza"]}}</p>
+  </div>
+</div>
+
+<div class="centrar row">
+  <div class="col-md-6">
+    <h4>Simulador de inversiones</h4>
+    <form class="form">
+      <div class="form-group">
+        <input class="form-control" type="number" placeholder="Dinero a invertir" name="dinero" [(ngModel)]="dinero">
+      </div>
+      <br>
+      <div class="form-group centrar">
+        <button (click)="invertir()" class="btn btn-success ">Simular inversion</button>
+      </div>
+    </form>
+  </div>
+  
+  <div class="dividendos col-md-6">
+    <h4>Dividendos de inversion:</h4>
+    <p><span class="subtitle">Inversión: </span>{{ dinero !== undefined ? dinero : 0 }}</p>
+    <p><span class="subtitle">Ganancia: </span>{{ ganancia!== undefined ? ganancia : 0 }}</p>
+    <p><span class="subtitle">Total: </span>{{ inversion !== undefined ? inversion : 0 }}</p>
+  </div>
+</div>

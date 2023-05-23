@@ -12,20 +12,34 @@
           </thead>
           <tbody>
             
-            <tr (click)="VerEmpresa(i)" class="empresa" *ngFor="let empresa of empresas | paginate: { itemsPerPage: 12, currentPage: currentPage }; let i = index">
-                <td>{{ i + 1 + (currentPage - 1) * 12 }}</td>
+            <tr (dblclick)="VerEmpresa((i + 1 + (currentPage - 1) * 12)-1)" 
+            
+            class="empresa" 
+            *ngFor="let empresa of empresas | paginate: { itemsPerPage: 12, currentPage: currentPage }; 
+            let i = index">
+            <td class="cursorP"
+            (click)="seleccionar((i + 1 + (currentPage - 1) * 12)-1)"
+            id="{{i + 1 + (currentPage - 1) * 12}}"
+            [ngClass]="{ 'selected': selected.indexOf((i + 1 + (currentPage - 1) * 12)-1) !== -1, 'unselected': selected.indexOf((i + 1 + (currentPage - 1) * 12)-1) === -1 }">
+          {{ i + 1 + (currentPage - 1) * 12 }}
+        </td>
+        
                 <td>{{ empresa["symbol"] }}</td>
                 <td>{{ empresa["name"] }}</td>
                 <td>{{ empresa["exchange"] }}</td>
                 <td>{{ empresa["assetType"] }}</td>
                 <td>{{ empresa["ipoDate"] }}</td>
             </tr>
+            
           </tbody>
           
     </table>
   </div>
+  <div *ngIf="selected.length>1" class="position">
+    <button (click)="decidir()" class="btn btn-primary ">Decidir</button>
+  </div>
+
+<pagination-controls (pageChange)="currentPage = $event"></pagination-controls>
   
-<div class="mx-auto">
-    <pagination-controls (pageChange)="currentPage = $event"></pagination-controls>
-</div>
+
 

@@ -1,0 +1,34 @@
+
+<div class="conclusiones">
+    <h4>Se concluye que la empresa mas confiable es {{detalle["accepted"]["rely"]}}</h4>
+</div>
+<br>
+<h6>Estadistica descriptiva</h6>
+<table class="table table-bordered">
+    
+    <thead>
+      <tr>
+        <th>Symbol</th>
+        <th>Media</th>
+        <th>Mediana</th>
+        <th>Moda</th>
+        <th>Desviación</th>
+        <th>Varianza</th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container *ngFor="let empresa of empresas">
+        <tr>
+          <td>{{ empresa.symbol }}</td>
+          <td>{{ empresa.media }}</td>
+          <td>{{ empresa.mediana }}</td>
+          <td>{{ empresa.moda }}</td>
+          <td>{{ empresa.desviacion }}</td>
+          <td>{{ empresa.varianza }}</td>
+        </tr>
+      </ng-container>
+    </tbody>
+  </table>
+
+
+  
